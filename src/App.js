@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import SearchIcon from './search.svg';
 import MovieCard from './MovieCard';
 
-// ✅ Changed to HTTPS
 const API_URL = 'https://www.omdbapi.com?apikey=613fb5e';
 
 const movie1 = {
@@ -21,7 +20,7 @@ const App = () => {
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
-    console.log(data); // Optional: to debug API response
+    console.log(data); 
     setMovies(data.Search);
   };
 
